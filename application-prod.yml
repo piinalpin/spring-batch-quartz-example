@@ -1,0 +1,15 @@
+app:
+  name: "Spring Batch Example"
+spring:
+  profiles:
+    active: "prod"
+  datasource:
+    url: "jdbc:mysql://HOST:PORT/DB_NAME?allowPublicKeyRetrieval=true&useSSL=false"
+    username: DB_USERNAME
+    password: DB_PASSWORD
+    driverClassName: com.mysql.cj.jdbc.Driver
+scheduler:
+  maverick:
+    cron: "0 0 14 ? * TUE *"
+files:
+  source-file: "sample-data.csv"
